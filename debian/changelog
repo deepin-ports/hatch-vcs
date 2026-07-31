@@ -1,3 +1,12 @@
+hatch-vcs (0.4.0-1) unstable; urgency=medium
+
+  * New upstream release.
+  * Drop patch, superseded upstream.
+  * Bump copyright.
+  * Bump Standards-Version to 4.6.2, no changes needed.
+
+ -- Stefano Rivera <stefanor@debian.org>  Sat, 11 Nov 2023 18:28:15 +0200
+
 hatch-vcs (0.3.0-2) unstable; urgency=medium
 
   * Patch: Support setuptools_scm 7.1 in tests. (Closes: #1027623)
