@@ -1,3 +1,12 @@
+hatch-vcs (0.5.0-1) unstable; urgency=medium
+
+  * New upstream release.
+  * Bump copyright years.
+  * Patch: Unset SETUPTOOLS_SCM_PRETEND_VERSION in tests.
+  * Bump Standards-Version to 4.7.2, no changes needed.
+
+ -- Stefano Rivera <stefanor@debian.org>  Sat, 09 Aug 2025 23:16:29 +0200
+
 hatch-vcs (0.4.0-1) unstable; urgency=medium
 
   * New upstream release.

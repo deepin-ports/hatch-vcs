@@ -1,0 +1,24 @@
+From: Stefano Rivera <stefano@rivera.za.net>
+Date: Sat, 9 Aug 2025 22:31:05 +0200
+Subject: Unset SETUPTOOLS_SCM_PRETEND_VERSION in version tests
+
+It will be set in Debian package builds, but will break the assumptions
+of the tests.
+---
+ tests/test_version_config.py | 3 +++
+ 1 file changed, 3 insertions(+)
+
+diff --git a/tests/test_version_config.py b/tests/test_version_config.py
+index 14df634..baa3f06 100644
+--- a/tests/test_version_config.py
++++ b/tests/test_version_config.py
+@@ -7,6 +7,9 @@ import pytest
+ 
+ from hatch_vcs.version_source import VCSVersionSource
+ 
++import os
++os.environ.pop('SETUPTOOLS_SCM_PRETEND_VERSION', None)
++
+ 
+ class TestTagPattern:
+     def test_correct(self, new_project_basic):
